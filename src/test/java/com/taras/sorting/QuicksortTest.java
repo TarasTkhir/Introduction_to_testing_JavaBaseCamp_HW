@@ -28,7 +28,7 @@ class QuicksortTest {
 
         unitForTestingQuicksortClass = null;
 
-        System.out.println("Time " + (System.currentTimeMillis() - startTime) + "Ms");
+        System.out.println( "Time " + (System.currentTimeMillis() - startTime) + "Ms");
         System.out.println("End");
     }
 
@@ -37,7 +37,7 @@ class QuicksortTest {
 
         List<Integer> testUnitList = new LinkedList<Integer>();
 
-        assertThrows(RuntimeException.class, () -> unitForTestingQuicksortClass.quicksort(testUnitList));
+        assertThrows(ListIsEmptyException.class,() -> unitForTestingQuicksortClass.quicksort(testUnitList));
 
     }
 
@@ -68,6 +68,11 @@ class QuicksortTest {
         assertEquals(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)),
                 unitForTestingQuicksortClass.quicksort(new LinkedList<Integer>(Arrays.asList(5, 7, 8, 1, 2, 3, 4, 6, 10, 9))));
 
+        assertEquals(new ArrayList<Integer>(Arrays.asList(100, 200, 300, 400, 500)),
+                unitForTestingQuicksortClass.quicksort(new ArrayList<Integer>(Arrays.asList(300, 500, 100, 400, 200))));
+
+        assertEquals(new ArrayList<Integer>(Arrays.asList(25, 50, 75, 100, 125, 150)),
+                unitForTestingQuicksortClass.quicksort(Arrays.asList(25, 50, 75, 100, 125, 150)));
     }
 
     @Test
@@ -76,6 +81,14 @@ class QuicksortTest {
         assertNotEquals(new ArrayList<Integer>(Arrays.asList(50, 25, 75, 100, 125, 150)),
                 unitForTestingQuicksortClass.quicksort(Arrays.asList(50, 25, 75, 100, 125, 150)));
 
+        assertNotEquals(new ArrayList<Integer>(Arrays.asList(5, 7, 8, 1, 2, 3, 4, 6, 10, 9)),
+                unitForTestingQuicksortClass.quicksort(Arrays.asList(5, 7, 8, 1, 2, 3, 4, 6, 10, 9)));
+
+        assertNotEquals(new ArrayList<Integer>(Arrays.asList(200, 100, 300, 400, 500)),
+                unitForTestingQuicksortClass.quicksort(Arrays.asList(500, 200, 300, 400, 100)));
+
+        assertNotEquals(new ArrayList<Integer>(Arrays.asList(1,2,5,7,9,8)),
+                unitForTestingQuicksortClass.quicksort(Arrays.asList(9,8,7,5,2,1)));
     }
 
 }
