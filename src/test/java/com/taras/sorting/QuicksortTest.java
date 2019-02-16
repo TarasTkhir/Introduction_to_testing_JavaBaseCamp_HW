@@ -1,5 +1,5 @@
 package com.taras.sorting;
-
+import com.taras.exception.ListIsEmptyException;
 import com.taras.sorting.Quicksort;
 import com.taras.exception.ListIsEmptyException;
 import org.junit.jupiter.api.AfterAll;
