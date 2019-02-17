@@ -32,15 +32,6 @@ class QuicksortTest {
         System.out.println("End");
     }
 
-    @Test()
-    void testQuicksortExceptionWhenListIsEmpty() {
-
-        List<Integer> testUnitList = new LinkedList<Integer>();
-
-        assertThrows(ListIsEmptyException.class,() -> unitForTestingQuicksortClass.quicksort(testUnitList));
-
-    }
-
 
     @Test
     void testQuicksortIsArrayListReturned() {
@@ -90,5 +81,12 @@ class QuicksortTest {
         assertNotEquals(new ArrayList<Integer>(Arrays.asList(1,2,5,7,9,8)),
                 unitForTestingQuicksortClass.quicksort(Arrays.asList(9,8,7,5,2,1)));
     }
+
+    @Test()
+    void testAddListToListIsWriteDataReturned() {}
+
+    @Test()
+    void testAddListToListIsWrongDataReturned() {}
+
 
 }
