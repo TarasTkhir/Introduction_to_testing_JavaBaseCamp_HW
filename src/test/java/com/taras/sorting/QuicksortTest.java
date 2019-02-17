@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,10 +48,15 @@ class QuicksortTest {
     }
 
     @Test
-    void testQuicksortLessListSizeThan2() {
+    void testQuicksortSameSizeReturned() {
         List<Integer> testSizeList = Arrays.asList(1);
         int inputSize = testSizeList.size();
         int outputSize = unitForTestingQuicksortClass.quicksort(testSizeList).size();
+        assertEquals(outputSize, inputSize);
+
+        testSizeList = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        int inputSize1 = testSizeList.size();
+        int outputSize1 = unitForTestingQuicksortClass.quicksort(testSizeList).size();
         assertEquals(outputSize, inputSize);
     }
 
