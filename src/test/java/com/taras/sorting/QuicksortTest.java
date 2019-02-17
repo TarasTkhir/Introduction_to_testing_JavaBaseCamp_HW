@@ -1,4 +1,5 @@
 package com.taras.sorting;
+
 import com.taras.exception.ListIsEmptyException;
 import com.taras.sorting.Quicksort;
 import com.taras.exception.ListIsEmptyException;
@@ -28,7 +29,7 @@ class QuicksortTest {
 
         unitForTestingQuicksortClass = null;
 
-        System.out.println( "Time " + (System.currentTimeMillis() - startTime) + "Ms");
+        System.out.println("Time " + (System.currentTimeMillis() - startTime) + "Ms");
         System.out.println("End");
     }
 
@@ -78,15 +79,38 @@ class QuicksortTest {
         assertNotEquals(new ArrayList<Integer>(Arrays.asList(200, 100, 300, 400, 500)),
                 unitForTestingQuicksortClass.quicksort(Arrays.asList(500, 200, 300, 400, 100)));
 
-        assertNotEquals(new ArrayList<Integer>(Arrays.asList(1,2,5,7,9,8)),
-                unitForTestingQuicksortClass.quicksort(Arrays.asList(9,8,7,5,2,1)));
+        assertNotEquals(new ArrayList<Integer>(Arrays.asList(1, 2, 5, 7, 9, 8)),
+                unitForTestingQuicksortClass.quicksort(Arrays.asList(9, 8, 7, 5, 2, 1)));
     }
 
     @Test()
-    void testAddListToListIsWriteDataReturned() {}
+    void testAddListToListIsWriteDataReturned() {
+
+        assertEquals(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+                unitForTestingQuicksortClass.addListToList(Arrays.asList(1, 2, 3, 4, 5),
+                        6, Arrays.asList(7, 8, 9, 10)));
+        assertEquals(Arrays.asList(3,2,1,4,5,6,9,10,8,7),
+                unitForTestingQuicksortClass.addListToList(Arrays.asList(3, 2, 1, 4, 5),
+                        6, Arrays.asList(9, 10, 8, 7)));
+        assertEquals(Arrays.asList(75,25,50,100,150,125,175),
+                unitForTestingQuicksortClass.addListToList(Arrays.asList(75, 25, 50),
+                        100, Arrays.asList(150,125,175)));
+    }
 
     @Test()
-    void testAddListToListIsWrongDataReturned() {}
+    void testAddListToListIsWrongDataReturned() {
+
+        assertNotEquals(Arrays.asList(1, 2, 3, 4, 6, 7, 8, 9, 10),
+                unitForTestingQuicksortClass.addListToList(Arrays.asList(1, 2, 3, 4),
+                        5, Arrays.asList(6, 7, 8, 9, 10)));
+        assertNotEquals(Arrays.asList(0,2,0,2,0,2,0,2,0,2),
+                unitForTestingQuicksortClass.addListToList(Arrays.asList(0,2,0,2),
+                        2, Arrays.asList(2,0,2,0,2)));
+        assertNotEquals(Arrays.asList(100,125,150,175,200),
+                unitForTestingQuicksortClass.addListToList(Arrays.asList(100,125,150),
+                        200, Arrays.asList(175)));
+
+    }
 
 
 }
