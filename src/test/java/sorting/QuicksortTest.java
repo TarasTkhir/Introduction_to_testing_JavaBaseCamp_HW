@@ -39,11 +39,11 @@ public class QuicksortTest {
     @Test
     void whenTwoListOfGreaterAndLessNumbersAndMiddleNumberIsGivenThenReturnListAddedToMiddleNumberAndToList(){
 
-        assertEquals((),unit.addListToList(Arrays.asList(1, 2, 3, 4, 5,),
+        assertEquals(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),unit.addListToList(Arrays.asList(1, 2, 3, 4, 5),
                 6, Arrays.asList(7, 8, 9, 10)));
-        assertEquals((),unit.addListToList(Arrays.asList(3, 2, 1, 4, 5,),
+        assertEquals(Arrays.asList(3,2,1,4,5,6,9,10,8,7),unit.addListToList(Arrays.asList(3, 2, 1, 4, 5),
                 6, Arrays.asList(9, 10, 8, 7)));
-        assertEquals((),unit.addListToListArrays.asList(75, 25, 50),
+        assertEquals(Arrays.asList(75,25,50,100,150,125,175),unit.addListToList(Arrays.asList(75, 25, 50),
                 100, Arrays.asList(150,125,175)));
     }
 }
