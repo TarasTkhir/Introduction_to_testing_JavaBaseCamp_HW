@@ -28,6 +28,12 @@ public class QuicksortTest {
     @Test
     void whenListIntegerGivenThenReturnArrayList() {
 
+        assertEquals(new ArrayList<Integer>(Arrays.asList()), unit.quicksort(Arrays.asList()));
+    }
+
+    @Test
+    void whenListOfSize1GivenThenReturnSameListConvertedToArrayList(){
+
         assertEquals(new ArrayList<Integer>(Arrays.asList(1)), unit.quicksort(Arrays.asList(1)));
     }
 }
