@@ -11,11 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class QuicksortTest {
 
-    Quicksort unit;
-    
+    private static Quicksort unit;
+
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
 
+        unit =new Quicksort();
     }
 
     @AfterAll
