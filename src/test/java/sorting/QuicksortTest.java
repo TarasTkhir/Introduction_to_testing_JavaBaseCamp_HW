@@ -46,4 +46,11 @@ public class QuicksortTest {
         assertEquals(Arrays.asList(75,25,50,100,150,125,175),unit.addListToList(Arrays.asList(75, 25, 50),
                 100, Arrays.asList(150,125,175)));
     }
+
+    @Test
+    void whenListGivenThenReturnIndexOfMiddleNumber(){
+
+        assertEquals(3,unit.middleNumberIndex(Arrays.asList(3,5,8,1,9,6)));
+        assertEquals(4,unit.middleNumberIndex(Arrays.asList(3,5,8,1,9,6,7)));
+    }
 }

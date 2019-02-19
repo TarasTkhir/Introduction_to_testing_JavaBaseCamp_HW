@@ -31,4 +31,7 @@ public class Quicksort {
 
         return resultList;
     }
+
+    public int middleNumberIndex(List<Integer> asList) {
+    }
 }
