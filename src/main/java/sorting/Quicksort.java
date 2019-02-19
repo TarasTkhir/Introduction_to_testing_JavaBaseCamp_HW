@@ -32,6 +32,9 @@ public class Quicksort {
         return resultList;
     }
 
-    public int middleNumberIndex(List<Integer> asList) {
+    public int middleNumberIndex(List<Integer> listToSort) {
+
+        return (int) Math.ceil((double) listToSort.size() / 2);
+
     }
 }
