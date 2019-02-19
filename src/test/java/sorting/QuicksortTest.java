@@ -57,7 +57,8 @@ public class QuicksortTest {
     @Test
     void whenListGivenThenReturnListWhereValuesAreLessThanValueOfGivenIndexOrEqualsToIt(){
 
-        assertEquals(Arrays.asList(5,7,7,8), unit.getLessList(Arrays.asList(5,7,12,9,7,8,10)));
+        assertEquals(Arrays.asList(5,7), unit.getLessList(Arrays.asList(5,7,12,9,7,8,10)));
+        assertEquals(Arrays.asList(1), unit.getLessList(Arrays.asList(1,2,3,4,1,6,7)));
 
     }
 }

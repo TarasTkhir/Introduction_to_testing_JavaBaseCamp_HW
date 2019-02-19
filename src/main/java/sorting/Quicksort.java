@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Quicksort {
 
-    public ArrayList<Integer> quicksort( List<Integer> listToSort ){
+    public ArrayList<Integer> quicksort(List<Integer> listToSort) {
 
-        if(listToSort.size()<=1){
+        if (listToSort.size() <= 1) {
 
             return new ArrayList<Integer>(listToSort);
         }
@@ -36,5 +36,23 @@ public class Quicksort {
 
         return (int) Math.ceil((double) listToSort.size() / 2);
 
+    }
+
+    public List<Integer> getLessList(List<Integer> listToSort) {
+
+        int middle = middleNumberIndex(listToSort);
+        int fixedMiddle = listToSort.get(middle);
+
+        List<Integer> less = new ArrayList<Integer>();
+
+        for (int i = 0; i < listToSort.size(); i++) {
+            if (listToSort.get(i) <= fixedMiddle) {
+                if (i == middle) {
+                    continue;
+                }
+                less.add(listToSort.get(i));
+            }
+        }
+        return less;
     }
 }
