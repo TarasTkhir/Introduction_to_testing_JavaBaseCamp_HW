@@ -12,7 +12,8 @@ public class Quicksort {
             return new ArrayList<Integer>(listToSort);
         }
 
-        return new ArrayList<Integer>(listToSort);
+        return new ArrayList<Integer>(addListToList(quicksort(getLessList(listToSort)),
+                listToSort.get(middleNumberIndex(listToSort)), quicksort(getGreaterList(listToSort))));
     }
 
     public List<Integer> addListToList(List<Integer> less, int fixedMidle, List<Integer> greater) {

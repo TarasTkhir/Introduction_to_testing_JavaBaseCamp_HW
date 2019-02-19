@@ -76,7 +76,7 @@ public class QuicksortTest {
     @Test
     void whenListGivenThenReturnSortedByQuicksortArrayList() {
         assertEquals(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)),
-                unit.quicksort(Arrays.asList(5, 6, 1, 4, 8, 9, 7, 2, 3, 8, 10)));
+                unit.quicksort(Arrays.asList(5, 6, 1, 4, 8, 9, 7, 2, 3, 10)));
 
         assertEquals(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9, 10)),
                 unit.quicksort(new LinkedList<Integer>(Arrays.asList(5, 7, 8, 1, 2, 3, 4, 6, 10, 9, 5, 5))));
