@@ -34,7 +34,7 @@ public class Quicksort {
 
     public int middleNumberIndex(List<Integer> listToSort) {
 
-        return (int) Math.ceil((double) listToSort.size() / 2);
+        return (int) ((Math.ceil((double) listToSort.size() / 2))-1);
 
     }
 
