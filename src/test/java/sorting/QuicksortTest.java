@@ -50,8 +50,8 @@ public class QuicksortTest {
     @Test
     void whenListGivenThenReturnIndexOfMiddleNumber(){
 
-        assertEquals(3,unit.middleNumberIndex(Arrays.asList(3,5,8,1,9,6)));
-        assertEquals(4,unit.middleNumberIndex(Arrays.asList(3,5,8,1,9,6,7)));
+        assertEquals(2,unit.middleNumberIndex(Arrays.asList(3,5,8,1,9,6)));
+        assertEquals(3,unit.middleNumberIndex(Arrays.asList(3,5,8,1,9,6,7)));
     }
 
     @Test

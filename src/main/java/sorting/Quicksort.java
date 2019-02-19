@@ -55,4 +55,22 @@ public class Quicksort {
         }
         return less;
     }
+
+    public List<Integer> getGreaterList(List<Integer> listToSort) {
+
+        int middle = middleNumberIndex(listToSort);
+        int fixedMiddle = listToSort.get(middle);
+
+        List<Integer> greater = new ArrayList<Integer>();
+
+        for (int i = 0; i < listToSort.size(); i++) {
+            if (listToSort.get(i) > fixedMiddle) {
+                if (i == middle) {
+                    continue;
+                }
+                greater.add(listToSort.get(i));
+            }
+        }
+        return greater;
+    }
 }
