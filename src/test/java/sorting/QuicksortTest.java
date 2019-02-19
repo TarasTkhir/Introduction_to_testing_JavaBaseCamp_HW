@@ -32,7 +32,7 @@ public class QuicksortTest {
     }
 
     @Test
-    void whenListOfSize1GivenThenReturnSameListConvertedToArrayList(){
+    void whenListSizeLessThat2ThenReturnSameListConvertedToArrayList(){
 
         assertEquals(new ArrayList<Integer>(Arrays.asList(1)), unit.quicksort(Arrays.asList(1)));
     }
