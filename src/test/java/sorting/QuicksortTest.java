@@ -53,4 +53,11 @@ public class QuicksortTest {
         assertEquals(3,unit.middleNumberIndex(Arrays.asList(3,5,8,1,9,6)));
         assertEquals(4,unit.middleNumberIndex(Arrays.asList(3,5,8,1,9,6,7)));
     }
+
+    @Test
+    void whenListGivenThenReturnListWhereValuesAreLessThanValueOfGivenIndexOrEqualsToIt(){
+
+        assertEquals(Arrays.asList(5,7,7,8), unit.getLessList(Arrays.asList(5,7,12,9,7,8,10)));
+
+    }
 }
